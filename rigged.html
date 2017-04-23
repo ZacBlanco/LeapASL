@@ -7,7 +7,18 @@
 
   <style>
     body{
-      margin: 0;
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+      border-color: black;
+    }
+    div {
+      clear: both;
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+      background-color: black;
+      border-color: black;
     }
     #TestOutput {
         color:white;
@@ -23,6 +34,13 @@
 </head>
 <body>
 
+<<<<<<< Updated upstream
+=======
+  <div id="hands" align="center">
+    <img id="handPics" src="test.jpg" height="42" width="42">
+  </div>
+
+>>>>>>> Stashed changes
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js"></script>
 <script type="text/javascript" src="lib/TrackballControls.js"></script>
 
@@ -38,6 +56,15 @@
 <script type="text/javascript" src="lib/test.js"></script>
 
 <script type="text/javascript" src="lib/advanced.js"></script>
+<script>
+  var imgs = ["alphabet/a.jpg", "alphabet/b.jpg", "alphabet/c.jpg", "alphabet/d.jpg", "alphabet/e.jpg", "alphabet/f.jpg","alphabet/g.jpg"
+, "alphabet/h.jpg", "alphabet/i.jpg", "alphabet/j.jpg", "alphabet/k.jpg", "alphabet/l.jpg", "alphabet/m.jpg",
+"alphabet/n.jpg", "alphabet/o.jpg", "alphabet/p.jpg", "alphabet/q.jpg", "alphabet/r.jpg", "alphabet/s.png",
+"alphabet/t.jpg", "alphabet/u.jpg", "alphabet/v.jpg", "alphabet/w.jpg", "alphabet/x.jpg", "alphabet/y.jpg", "alphabet/z.jpg"]
+  var pic = document.getElementById("handPics")
+  pic.src = imgs[25];
+
+</script>
 
 </body>
 </html>
