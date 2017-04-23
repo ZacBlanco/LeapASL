@@ -49,7 +49,6 @@
         // ***Train the SVM***
         if(client.responseText == null) {
           console.log("something is wrong with text file")
-          return;
           //do nothing
         } else
 
@@ -63,13 +62,13 @@
               console.log(i);
             //console.log(client.responseText.indexOf("\n", start));
             start = client.responseText.indexOf("\n", start);
-            handData.push(client.responseText.substring(start,i));
+            handData.push(client.responseText.substring(i,start));
             start = start + 1;
             i = start;
             }
-          handData.push(client.responseText.substring(client.responseText.length+1,i));
+          handData.push(client.responseText.substring(i,client.responseText.length+1));
           //prints out only the code at the top
-          console.log(client.responseText.substring(client.responseText.length+1,i));
+          console.log(client.responseText.substring(i,client.responseText.length+1));
           runthru = 1;
         }
       }
