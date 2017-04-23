@@ -63,11 +63,12 @@
             //console.log(client.responseText.indexOf("\n", start));
             start = client.responseText.indexOf("\n", start);
             handData.push(client.responseText.substring(i,start));
+            console.log(client.responseText.substring(i,start));
             start = start + 1;
             i = start;
             }
           handData.push(client.responseText.substring(i,client.responseText.length+1));
-          //prints out only the code at the top
+          //prints out only the code at the top???
           console.log(client.responseText.substring(i,client.responseText.length+1));
           runthru = 1;
         }
