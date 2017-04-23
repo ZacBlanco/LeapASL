@@ -10,14 +10,16 @@ const url = require('url')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+let child
 
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
+  //child = new BrowserWindow({parent:mainWindow})
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
+    pathname: path.join(__dirname, 'rigged.html'),
     protocol: 'file:',
     slashes: true
   }))
@@ -32,6 +34,8 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  //child.show()
 }
 
 // This method will be called when Electron has finished
