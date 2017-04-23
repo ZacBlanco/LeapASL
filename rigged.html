@@ -23,6 +23,20 @@
 </head>
 <body>
 
+<script>
+    var client = new XMLHttpRequest();
+    client.open('GET', 'training_data.csv');
+    client.onreadystatechange = function() {
+        //Data in:
+        //client.responseText
+        //Do stuff with it.
+        // ***Train the SVM***
+        
+
+    }
+    client.send();
+</script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js"></script>
 <script type="text/javascript" src="lib/TrackballControls.js"></script>
 
