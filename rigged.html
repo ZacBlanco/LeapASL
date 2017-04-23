@@ -36,12 +36,63 @@
 
 <script>
     var client = new XMLHttpRequest();
+    var handData = [];
     client.open('GET', 'training_data.csv');
     client.onreadystatechange = function() {
         //Data in:
         //client.responseText
         //Do stuff with it.
         // ***Train the SVM***
+        if(client.responseText == null) {
+          console.log("something is wrong with text file")
+        }
+
+        var start = 0;
+        var i = 0;
+        /*while(i < client.responseText.length) {
+
+          if(client.responseText.charAt[i] == "<br>") {
+            console.log(client.responseText.substring(start,i));
+            handData.push(client.responseText.substring(start, i));
+            start = i+1;
+          }
+        }
+        */
+
+        //this is running 3 different times
+        //first starts with -1
+        //then the indexs
+        //then repeats the indexs again
+        console.log(client.responseText.indexOf("\r\n", start));
+        start = client.responseText.indexOf("\r\n", start) + 1;
+        console.log(client.responseText.indexOf("\r\n", start));
+        start = client.responseText.indexOf("\r\n", start) + 1;
+        console.log(client.responseText.indexOf("\r\n", start));
+        start = client.responseText.indexOf("\r\n", start) + 1;
+        console.log(client.responseText.indexOf("\r\n", start));
+        start = client.responseText.indexOf("\r\n", start) + 1;
+        console.log(client.responseText.indexOf("\r\n", start));
+        start = client.responseText.indexOf("\r\n", start) + 1;
+        console.log(client.responseText.indexOf("\r\n", start));
+        start = client.responseText.indexOf("\r\n", start) + 1;
+        console.log(client.responseText.indexOf("\r\n", start));
+        start = client.responseText.indexOf("\r\n", start) + 1;
+        console.log(client.responseText.indexOf("\r\n", start));
+        start = client.responseText.indexOf("\r\n", start) + 1;
+        console.log(client.responseText.indexOf("\r\n", start));
+        start = client.responseText.indexOf("\r\n", start) + 1;
+        console.log(client.responseText.indexOf("\r\n", start));
+        start = client.responseText.indexOf("\r\n", start) + 1;
+        console.log(client.responseText.indexOf("\r\n", start));
+        start = client.responseText.indexOf("\r\n", start) + 1;
+        console.log(client.responseText.indexOf("\r\n", start));
+        start = client.responseText.indexOf("\r\n", start) + 1;
+        console.log(client.responseText.indexOf("\r\n", start));
+        start = client.responseText.indexOf("\r\n", start) + 1;
+
+
+
+
 
 
     }
